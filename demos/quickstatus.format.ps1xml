@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Format type data generated 01/28/2021 17:37:17 by PROSPERO\Jeff
+
+This file was created using the New-PSFormatXML command that is part
+of the PSScriptTools module.
+https://github.com/jdhitsolutions/PSScriptTools
+-->
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <!--Created 01/28/2021 17:37:17 by PROSPERO\Jeff-->
+      <Name>default</Name>
+      <ViewSelectedBy>
+        <TypeName>QuickStatus</TypeName>
+      </ViewSelectedBy>
+      <TableControl>
+        <!--Delete the AutoSize node if you want to use the defined widths.-->
+        <AutoSize />
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Computername</Label>
+            <Width>15</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Uptime</Label>
+            <Width>21</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>%FreeMem</Label>
+            <Width>13</Width>
+            <Alignment>right</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PctFreeC</Label>
+            <Width>11</Width>
+            <Alignment>right</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>PctFreeD</Label>
+            <Width>11</Width>
+            <Alignment>right</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <!--
+                By default the entries use property names, but you can replace them with scriptblocks.
+                <ScriptBlock>$_.foo /1mb -as [int]</ScriptBlock>
+              -->
+              <TableColumnItem>
+                <PropertyName>Computername</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Uptime</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PctFreeMem</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PctFreeC</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>PctFreeD</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

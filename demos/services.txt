@@ -1,0 +1,6 @@
+bits
+winrm
+winmgmt
+spooler
+lanmanserver
+lanmanworkstation

@@ -1,0 +1,6 @@
+"Name","StartType"
+"bits","Manual"
+"winrm","Automatic"
+"winmgmt","Automatic"
+"spooler","Manual"
+"remoteregistry","Disabled"

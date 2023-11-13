@@ -1,0 +1,151 @@
+<!--
+Format type data generated 11/07/2023 15:25:03 by PROSPERO\Jeff
+
+This file was created using the New-PSFormatXML command that is part
+of the PSScriptTools module.
+
+https://github.com/jdhitsolutions/PSScriptTools
+-->
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <!--Created 11/07/2023 15:25:03 by PROSPERO\Jeff-->
+      <Name>default</Name>
+      <ViewSelectedBy>
+        <TypeName>psExtensionInfo</TypeName>
+      </ViewSelectedBy>
+      <GroupBy>
+        <!--
+            You can also use a scriptblock to define a custom property name.
+            You must have a Label tag.
+            <ScriptBlock>$_.machinename.ToUpper()</ScriptBlock>
+            <Label>Computername</Label>
+
+            Use <Label> to set the displayed value.
+        -->
+        <PropertyName>Path</PropertyName>
+        <Label>Path</Label>
+      </GroupBy>
+      <TableControl>
+        <!--Delete the AutoSize node if you want to use the defined widths.-->
+        <AutoSize />
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Extension</Label>
+            <Width>12</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Count</Label>
+            <Width>8</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>AverageSize</Label>
+            <Width>14</Width>
+            <!-- modified alignment -->
+            <Alignment>right</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TotalSize</Label>
+            <Width>12</Width>
+            <!-- modified alignment -->
+            <Alignment>right</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <!--
+              By default the entries use property names, but you can replace them with scriptblocks.
+              <ScriptBlock>$_.foo /1mb -as [int]</ScriptBlock>
+              -->
+              <TableColumnItem>
+                <PropertyName>Extension</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Count</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>
+                  <!-- formatting the average size to 2 decimal places-->
+                [math]::Round($_.AverageSize,2)
+                </ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>TotalSize</PropertyName>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+    <View>
+      <!--Created 11/07/2023 15:41:06 by PROSPERO\Jeff-->
+      <Name>kb</Name>
+      <ViewSelectedBy>
+        <TypeName>psExtensionInfo</TypeName>
+      </ViewSelectedBy>
+      <GroupBy>
+        <!--
+            You can also use a scriptblock to define a custom property name.
+            You must have a Label tag.
+            <ScriptBlock>$_.machinename.ToUpper()</ScriptBlock>
+            <Label>Computername</Label>
+
+            Use <Label> to set the displayed value.
+        -->
+        <ScriptBlock>"$($PSStyle.Italic)$($PSStyle.Foreground.BrightCyan){0}$($PSStyle.Reset) [{1}]" -f $_.Path,$_.Computername</ScriptBlock>
+        <Label>Path</Label>
+      </GroupBy>
+      <TableControl>
+        <!--Delete the AutoSize node if you want to use the defined widths.
+        <AutoSize />-->
+        <TableHeaders>
+          <TableColumnHeader>
+            <Label>Extension</Label>
+            <Width>12</Width>
+            <Alignment>left</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Count</Label>
+            <Width>6</Width>
+            <Alignment>right</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>AvgKB</Label>
+            <Width>15</Width>
+            <Alignment>right</Alignment>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>TotalKB</Label>
+            <Width>15</Width>
+            <Alignment>right</Alignment>
+          </TableColumnHeader>
+        </TableHeaders>
+        <TableRowEntries>
+          <TableRowEntry>
+            <TableColumnItems>
+              <!--
+                By default the entries use property names, but you can replace them with scriptblocks.
+                <ScriptBlock>$_.foo /1mb -as [int]</ScriptBlock>
+            -->
+              <TableColumnItem>
+                <PropertyName>Extension</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <PropertyName>Count</PropertyName>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>[math]::Round($_.AverageSize/1kb,2)</ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>[math]::Round($_.TotalSize/1kb,2)</ScriptBlock>
+              </TableColumnItem>
+            </TableColumnItems>
+          </TableRowEntry>
+        </TableRowEntries>
+      </TableControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>
