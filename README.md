@@ -24,9 +24,3 @@ You will learn:
 - A fundamental understanding of PowerShell, including its core components and syntax.
 - How to perform common administrative tasks using PowerShell, such as managing files and folders, querying system information, and working with the registry
 - Explore intermediate PowerShell concepts, including scripting, functions, error handling, and module management
-
-### Attendee Requirements
-
-- You must provide your own laptop computer (Windows or Mac) for this hands-on lab
-- Your machine must have a modern web browser
-- You need to have the latest version of PowerShell 7 installed
