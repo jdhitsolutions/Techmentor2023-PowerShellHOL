@@ -1,4 +1,4 @@
-# Hands-On Lab: PowerShell 101/102
+# Techmentor Hands-On Lab: PowerShell 101/102
 
 This repository contains my session material from my hands-on PowerShell workshop at TechMentor Orlando 2023. I have enabled the Discussions feature for this repository. If you have questions or comments, please post them there.
 
