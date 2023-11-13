@@ -1,10 +1,15 @@
 # Techmentor Hands-On Lab: PowerShell 101/102
 
-This repository contains my session material from my hands-on PowerShell workshop at TechMentor Orlando 2023. I have enabled the Discussions feature for this repository. If you have questions or comments, please post them there.
+This repository contains my session material from my hands-on PowerShell workshop at TechMentor Orlando 2023. 
 
 Nothing in the repository should be considered production-ready. Material is offered as-is with no warranty or guarantee of support. Everything should be treated as educational material.
 
 You can find all of my online links and activities at [https://jdhitsolutions.github.io](https://jdhitsolutions.github.io).
+
+
+## Discussions :information_desk_person:
+
+I have enabled the [Discussions](https://github.com/jdhitsolutions/Techmentor2023-PowerShellHOL/discussions) feature of this repository for follow-up questions or comments.
 
 ## Session Abstract
 
