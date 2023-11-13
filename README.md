@@ -4,7 +4,7 @@ This repository contains my session material from my hands-on PowerShell worksho
 
 Nothing in the repository should be considered production-ready. Material is offered as-is with no warranty or guarantee of support. Everything should be treated as educational material.
 
-To see all of my online links and activities, visit [https://jdhitsolutions.github.io](https://jdhitsolutions.github.io).
+You can find all of my online links and activities at [https://jdhitsolutions.github.io](https://jdhitsolutions.github.io).
 
 ## Session Abstract
 
